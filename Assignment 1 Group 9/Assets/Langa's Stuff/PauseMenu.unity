@@ -3018,8 +3018,8 @@ MonoBehaviour:
   musicSource: {fileID: 767338654}
   SFXSource: {fileID: 1069204511}
   background: {fileID: 0}
-  cartsMoving: {fileID: 0}
-  cartsHitting: {fileID: 0}
+  cartsMoving: {fileID: 8300000, guid: fe2437a4e75b71f42ac748f6c91c9821, type: 3}
+  cartsHitting: {fileID: 8300000, guid: 14334832643795d4b80b28484552a872, type: 3}
 --- !u!4 &1985248887
 Transform:
   m_ObjectHideFlags: 0
