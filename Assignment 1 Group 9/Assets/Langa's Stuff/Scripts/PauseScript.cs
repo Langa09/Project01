@@ -6,7 +6,7 @@ public class PauseScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     public void RestartGame()
@@ -33,6 +33,6 @@ public class PauseScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
