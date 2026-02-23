@@ -909,7 +909,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.228
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -3017,7 +3017,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   musicSource: {fileID: 767338654}
   SFXSource: {fileID: 1069204511}
-  background: {fileID: 0}
+  background: {fileID: 8300000, guid: d3ddc40e6da626c4b8f71682390c6fc6, type: 3}
   cartsMoving: {fileID: 8300000, guid: fe2437a4e75b71f42ac748f6c91c9821, type: 3}
   cartsHitting: {fileID: 8300000, guid: 14334832643795d4b80b28484552a872, type: 3}
 --- !u!4 &1985248887
