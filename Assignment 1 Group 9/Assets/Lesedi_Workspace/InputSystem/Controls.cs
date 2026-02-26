@@ -135,6 +135,150 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Player2Controls"",
+            ""id"": ""1eb7a72c-b44a-4ef9-b182-091d82b203cd"",
+            ""actions"": [
+                {
+                    ""name"": ""Move"",
+                    ""type"": ""Value"",
+                    ""id"": ""eb117e23-5439-4c6b-afe3-0d18b83d1351"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""CartAim"",
+                    ""type"": ""Value"",
+                    ""id"": ""f82e8983-d653-4809-8b9f-d8a35767308b"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""715b28f7-f572-4ac8-8fba-0b88bba8504f"",
+                    ""path"": ""<Gamepad>/rightStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CartAim"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""56785654-7c35-4772-8989-a455ed4e9b36"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Player3Controls"",
+            ""id"": ""ffaa3eab-22e5-442f-b03d-39edb87bd553"",
+            ""actions"": [
+                {
+                    ""name"": ""Move"",
+                    ""type"": ""Value"",
+                    ""id"": ""dfab4caa-dcc6-4e0a-88df-e6072f972a63"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""CartAim"",
+                    ""type"": ""Value"",
+                    ""id"": ""4ff9e001-3b0c-47bc-9119-a6b59d068058"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""dc079af0-39e2-4ef6-8d97-f4c6fd207cc4"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4aefb7ac-de78-4fe7-a2d1-7c4e1c60ca2d"",
+                    ""path"": ""<Gamepad>/rightStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CartAim"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Player4Controls"",
+            ""id"": ""993b602a-f7dc-4b6a-a124-2346bd6f77b9"",
+            ""actions"": [
+                {
+                    ""name"": ""Move"",
+                    ""type"": ""Value"",
+                    ""id"": ""c442c2cc-65b3-4d20-aa74-68d388114060"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""CartAim"",
+                    ""type"": ""Value"",
+                    ""id"": ""2706b977-6c5e-4402-83e4-c2ca58adcf4d"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""e97d8f47-cb4e-4dfd-8e08-859ce128f958"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""232a78f7-342e-4180-9091-18d2525cd492"",
+                    ""path"": ""<Gamepad>/rightStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CartAim"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -143,11 +287,26 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         m_PlayerControls = asset.FindActionMap("PlayerControls", throwIfNotFound: true);
         m_PlayerControls_Move = m_PlayerControls.FindAction("Move", throwIfNotFound: true);
         m_PlayerControls_CartAim = m_PlayerControls.FindAction("CartAim", throwIfNotFound: true);
+        // Player2Controls
+        m_Player2Controls = asset.FindActionMap("Player2Controls", throwIfNotFound: true);
+        m_Player2Controls_Move = m_Player2Controls.FindAction("Move", throwIfNotFound: true);
+        m_Player2Controls_CartAim = m_Player2Controls.FindAction("CartAim", throwIfNotFound: true);
+        // Player3Controls
+        m_Player3Controls = asset.FindActionMap("Player3Controls", throwIfNotFound: true);
+        m_Player3Controls_Move = m_Player3Controls.FindAction("Move", throwIfNotFound: true);
+        m_Player3Controls_CartAim = m_Player3Controls.FindAction("CartAim", throwIfNotFound: true);
+        // Player4Controls
+        m_Player4Controls = asset.FindActionMap("Player4Controls", throwIfNotFound: true);
+        m_Player4Controls_Move = m_Player4Controls.FindAction("Move", throwIfNotFound: true);
+        m_Player4Controls_CartAim = m_Player4Controls.FindAction("CartAim", throwIfNotFound: true);
     }
 
     ~@Controls()
     {
         UnityEngine.Debug.Assert(!m_PlayerControls.enabled, "This will cause a leak and performance issues, Controls.PlayerControls.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_Player2Controls.enabled, "This will cause a leak and performance issues, Controls.Player2Controls.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_Player3Controls.enabled, "This will cause a leak and performance issues, Controls.Player3Controls.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_Player4Controls.enabled, "This will cause a leak and performance issues, Controls.Player4Controls.Disable() has not been called.");
     }
 
     /// <summary>
@@ -326,12 +485,399 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     /// Provides a new <see cref="PlayerControlsActions" /> instance referencing this action map.
     /// </summary>
     public PlayerControlsActions @PlayerControls => new PlayerControlsActions(this);
+
+    // Player2Controls
+    private readonly InputActionMap m_Player2Controls;
+    private List<IPlayer2ControlsActions> m_Player2ControlsActionsCallbackInterfaces = new List<IPlayer2ControlsActions>();
+    private readonly InputAction m_Player2Controls_Move;
+    private readonly InputAction m_Player2Controls_CartAim;
+    /// <summary>
+    /// Provides access to input actions defined in input action map "Player2Controls".
+    /// </summary>
+    public struct Player2ControlsActions
+    {
+        private @Controls m_Wrapper;
+
+        /// <summary>
+        /// Construct a new instance of the input action map wrapper class.
+        /// </summary>
+        public Player2ControlsActions(@Controls wrapper) { m_Wrapper = wrapper; }
+        /// <summary>
+        /// Provides access to the underlying input action "Player2Controls/Move".
+        /// </summary>
+        public InputAction @Move => m_Wrapper.m_Player2Controls_Move;
+        /// <summary>
+        /// Provides access to the underlying input action "Player2Controls/CartAim".
+        /// </summary>
+        public InputAction @CartAim => m_Wrapper.m_Player2Controls_CartAim;
+        /// <summary>
+        /// Provides access to the underlying input action map instance.
+        /// </summary>
+        public InputActionMap Get() { return m_Wrapper.m_Player2Controls; }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Enable()" />
+        public void Enable() { Get().Enable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Disable()" />
+        public void Disable() { Get().Disable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.enabled" />
+        public bool enabled => Get().enabled;
+        /// <summary>
+        /// Implicitly converts an <see ref="Player2ControlsActions" /> to an <see ref="InputActionMap" /> instance.
+        /// </summary>
+        public static implicit operator InputActionMap(Player2ControlsActions set) { return set.Get(); }
+        /// <summary>
+        /// Adds <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <param name="instance">Callback instance.</param>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c> or <paramref name="instance"/> have already been added this method does nothing.
+        /// </remarks>
+        /// <seealso cref="Player2ControlsActions" />
+        public void AddCallbacks(IPlayer2ControlsActions instance)
+        {
+            if (instance == null || m_Wrapper.m_Player2ControlsActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_Player2ControlsActionsCallbackInterfaces.Add(instance);
+            @Move.started += instance.OnMove;
+            @Move.performed += instance.OnMove;
+            @Move.canceled += instance.OnMove;
+            @CartAim.started += instance.OnCartAim;
+            @CartAim.performed += instance.OnCartAim;
+            @CartAim.canceled += instance.OnCartAim;
+        }
+
+        /// <summary>
+        /// Removes <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <remarks>
+        /// Calling this method when <paramref name="instance" /> have not previously been registered has no side-effects.
+        /// </remarks>
+        /// <seealso cref="Player2ControlsActions" />
+        private void UnregisterCallbacks(IPlayer2ControlsActions instance)
+        {
+            @Move.started -= instance.OnMove;
+            @Move.performed -= instance.OnMove;
+            @Move.canceled -= instance.OnMove;
+            @CartAim.started -= instance.OnCartAim;
+            @CartAim.performed -= instance.OnCartAim;
+            @CartAim.canceled -= instance.OnCartAim;
+        }
+
+        /// <summary>
+        /// Unregisters <param cref="instance" /> and unregisters all input action callbacks via <see cref="Player2ControlsActions.UnregisterCallbacks(IPlayer2ControlsActions)" />.
+        /// </summary>
+        /// <seealso cref="Player2ControlsActions.UnregisterCallbacks(IPlayer2ControlsActions)" />
+        public void RemoveCallbacks(IPlayer2ControlsActions instance)
+        {
+            if (m_Wrapper.m_Player2ControlsActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        /// <summary>
+        /// Replaces all existing callback instances and previously registered input action callbacks associated with them with callbacks provided via <param cref="instance" />.
+        /// </summary>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c>, calling this method will only unregister all existing callbacks but not register any new callbacks.
+        /// </remarks>
+        /// <seealso cref="Player2ControlsActions.AddCallbacks(IPlayer2ControlsActions)" />
+        /// <seealso cref="Player2ControlsActions.RemoveCallbacks(IPlayer2ControlsActions)" />
+        /// <seealso cref="Player2ControlsActions.UnregisterCallbacks(IPlayer2ControlsActions)" />
+        public void SetCallbacks(IPlayer2ControlsActions instance)
+        {
+            foreach (var item in m_Wrapper.m_Player2ControlsActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_Player2ControlsActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    /// <summary>
+    /// Provides a new <see cref="Player2ControlsActions" /> instance referencing this action map.
+    /// </summary>
+    public Player2ControlsActions @Player2Controls => new Player2ControlsActions(this);
+
+    // Player3Controls
+    private readonly InputActionMap m_Player3Controls;
+    private List<IPlayer3ControlsActions> m_Player3ControlsActionsCallbackInterfaces = new List<IPlayer3ControlsActions>();
+    private readonly InputAction m_Player3Controls_Move;
+    private readonly InputAction m_Player3Controls_CartAim;
+    /// <summary>
+    /// Provides access to input actions defined in input action map "Player3Controls".
+    /// </summary>
+    public struct Player3ControlsActions
+    {
+        private @Controls m_Wrapper;
+
+        /// <summary>
+        /// Construct a new instance of the input action map wrapper class.
+        /// </summary>
+        public Player3ControlsActions(@Controls wrapper) { m_Wrapper = wrapper; }
+        /// <summary>
+        /// Provides access to the underlying input action "Player3Controls/Move".
+        /// </summary>
+        public InputAction @Move => m_Wrapper.m_Player3Controls_Move;
+        /// <summary>
+        /// Provides access to the underlying input action "Player3Controls/CartAim".
+        /// </summary>
+        public InputAction @CartAim => m_Wrapper.m_Player3Controls_CartAim;
+        /// <summary>
+        /// Provides access to the underlying input action map instance.
+        /// </summary>
+        public InputActionMap Get() { return m_Wrapper.m_Player3Controls; }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Enable()" />
+        public void Enable() { Get().Enable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Disable()" />
+        public void Disable() { Get().Disable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.enabled" />
+        public bool enabled => Get().enabled;
+        /// <summary>
+        /// Implicitly converts an <see ref="Player3ControlsActions" /> to an <see ref="InputActionMap" /> instance.
+        /// </summary>
+        public static implicit operator InputActionMap(Player3ControlsActions set) { return set.Get(); }
+        /// <summary>
+        /// Adds <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <param name="instance">Callback instance.</param>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c> or <paramref name="instance"/> have already been added this method does nothing.
+        /// </remarks>
+        /// <seealso cref="Player3ControlsActions" />
+        public void AddCallbacks(IPlayer3ControlsActions instance)
+        {
+            if (instance == null || m_Wrapper.m_Player3ControlsActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_Player3ControlsActionsCallbackInterfaces.Add(instance);
+            @Move.started += instance.OnMove;
+            @Move.performed += instance.OnMove;
+            @Move.canceled += instance.OnMove;
+            @CartAim.started += instance.OnCartAim;
+            @CartAim.performed += instance.OnCartAim;
+            @CartAim.canceled += instance.OnCartAim;
+        }
+
+        /// <summary>
+        /// Removes <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <remarks>
+        /// Calling this method when <paramref name="instance" /> have not previously been registered has no side-effects.
+        /// </remarks>
+        /// <seealso cref="Player3ControlsActions" />
+        private void UnregisterCallbacks(IPlayer3ControlsActions instance)
+        {
+            @Move.started -= instance.OnMove;
+            @Move.performed -= instance.OnMove;
+            @Move.canceled -= instance.OnMove;
+            @CartAim.started -= instance.OnCartAim;
+            @CartAim.performed -= instance.OnCartAim;
+            @CartAim.canceled -= instance.OnCartAim;
+        }
+
+        /// <summary>
+        /// Unregisters <param cref="instance" /> and unregisters all input action callbacks via <see cref="Player3ControlsActions.UnregisterCallbacks(IPlayer3ControlsActions)" />.
+        /// </summary>
+        /// <seealso cref="Player3ControlsActions.UnregisterCallbacks(IPlayer3ControlsActions)" />
+        public void RemoveCallbacks(IPlayer3ControlsActions instance)
+        {
+            if (m_Wrapper.m_Player3ControlsActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        /// <summary>
+        /// Replaces all existing callback instances and previously registered input action callbacks associated with them with callbacks provided via <param cref="instance" />.
+        /// </summary>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c>, calling this method will only unregister all existing callbacks but not register any new callbacks.
+        /// </remarks>
+        /// <seealso cref="Player3ControlsActions.AddCallbacks(IPlayer3ControlsActions)" />
+        /// <seealso cref="Player3ControlsActions.RemoveCallbacks(IPlayer3ControlsActions)" />
+        /// <seealso cref="Player3ControlsActions.UnregisterCallbacks(IPlayer3ControlsActions)" />
+        public void SetCallbacks(IPlayer3ControlsActions instance)
+        {
+            foreach (var item in m_Wrapper.m_Player3ControlsActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_Player3ControlsActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    /// <summary>
+    /// Provides a new <see cref="Player3ControlsActions" /> instance referencing this action map.
+    /// </summary>
+    public Player3ControlsActions @Player3Controls => new Player3ControlsActions(this);
+
+    // Player4Controls
+    private readonly InputActionMap m_Player4Controls;
+    private List<IPlayer4ControlsActions> m_Player4ControlsActionsCallbackInterfaces = new List<IPlayer4ControlsActions>();
+    private readonly InputAction m_Player4Controls_Move;
+    private readonly InputAction m_Player4Controls_CartAim;
+    /// <summary>
+    /// Provides access to input actions defined in input action map "Player4Controls".
+    /// </summary>
+    public struct Player4ControlsActions
+    {
+        private @Controls m_Wrapper;
+
+        /// <summary>
+        /// Construct a new instance of the input action map wrapper class.
+        /// </summary>
+        public Player4ControlsActions(@Controls wrapper) { m_Wrapper = wrapper; }
+        /// <summary>
+        /// Provides access to the underlying input action "Player4Controls/Move".
+        /// </summary>
+        public InputAction @Move => m_Wrapper.m_Player4Controls_Move;
+        /// <summary>
+        /// Provides access to the underlying input action "Player4Controls/CartAim".
+        /// </summary>
+        public InputAction @CartAim => m_Wrapper.m_Player4Controls_CartAim;
+        /// <summary>
+        /// Provides access to the underlying input action map instance.
+        /// </summary>
+        public InputActionMap Get() { return m_Wrapper.m_Player4Controls; }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Enable()" />
+        public void Enable() { Get().Enable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Disable()" />
+        public void Disable() { Get().Disable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.enabled" />
+        public bool enabled => Get().enabled;
+        /// <summary>
+        /// Implicitly converts an <see ref="Player4ControlsActions" /> to an <see ref="InputActionMap" /> instance.
+        /// </summary>
+        public static implicit operator InputActionMap(Player4ControlsActions set) { return set.Get(); }
+        /// <summary>
+        /// Adds <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <param name="instance">Callback instance.</param>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c> or <paramref name="instance"/> have already been added this method does nothing.
+        /// </remarks>
+        /// <seealso cref="Player4ControlsActions" />
+        public void AddCallbacks(IPlayer4ControlsActions instance)
+        {
+            if (instance == null || m_Wrapper.m_Player4ControlsActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_Player4ControlsActionsCallbackInterfaces.Add(instance);
+            @Move.started += instance.OnMove;
+            @Move.performed += instance.OnMove;
+            @Move.canceled += instance.OnMove;
+            @CartAim.started += instance.OnCartAim;
+            @CartAim.performed += instance.OnCartAim;
+            @CartAim.canceled += instance.OnCartAim;
+        }
+
+        /// <summary>
+        /// Removes <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <remarks>
+        /// Calling this method when <paramref name="instance" /> have not previously been registered has no side-effects.
+        /// </remarks>
+        /// <seealso cref="Player4ControlsActions" />
+        private void UnregisterCallbacks(IPlayer4ControlsActions instance)
+        {
+            @Move.started -= instance.OnMove;
+            @Move.performed -= instance.OnMove;
+            @Move.canceled -= instance.OnMove;
+            @CartAim.started -= instance.OnCartAim;
+            @CartAim.performed -= instance.OnCartAim;
+            @CartAim.canceled -= instance.OnCartAim;
+        }
+
+        /// <summary>
+        /// Unregisters <param cref="instance" /> and unregisters all input action callbacks via <see cref="Player4ControlsActions.UnregisterCallbacks(IPlayer4ControlsActions)" />.
+        /// </summary>
+        /// <seealso cref="Player4ControlsActions.UnregisterCallbacks(IPlayer4ControlsActions)" />
+        public void RemoveCallbacks(IPlayer4ControlsActions instance)
+        {
+            if (m_Wrapper.m_Player4ControlsActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        /// <summary>
+        /// Replaces all existing callback instances and previously registered input action callbacks associated with them with callbacks provided via <param cref="instance" />.
+        /// </summary>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c>, calling this method will only unregister all existing callbacks but not register any new callbacks.
+        /// </remarks>
+        /// <seealso cref="Player4ControlsActions.AddCallbacks(IPlayer4ControlsActions)" />
+        /// <seealso cref="Player4ControlsActions.RemoveCallbacks(IPlayer4ControlsActions)" />
+        /// <seealso cref="Player4ControlsActions.UnregisterCallbacks(IPlayer4ControlsActions)" />
+        public void SetCallbacks(IPlayer4ControlsActions instance)
+        {
+            foreach (var item in m_Wrapper.m_Player4ControlsActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_Player4ControlsActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    /// <summary>
+    /// Provides a new <see cref="Player4ControlsActions" /> instance referencing this action map.
+    /// </summary>
+    public Player4ControlsActions @Player4Controls => new Player4ControlsActions(this);
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "PlayerControls" which allows adding and removing callbacks.
     /// </summary>
     /// <seealso cref="PlayerControlsActions.AddCallbacks(IPlayerControlsActions)" />
     /// <seealso cref="PlayerControlsActions.RemoveCallbacks(IPlayerControlsActions)" />
     public interface IPlayerControlsActions
+    {
+        /// <summary>
+        /// Method invoked when associated input action "Move" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnMove(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "CartAim" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnCartAim(InputAction.CallbackContext context);
+    }
+    /// <summary>
+    /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Player2Controls" which allows adding and removing callbacks.
+    /// </summary>
+    /// <seealso cref="Player2ControlsActions.AddCallbacks(IPlayer2ControlsActions)" />
+    /// <seealso cref="Player2ControlsActions.RemoveCallbacks(IPlayer2ControlsActions)" />
+    public interface IPlayer2ControlsActions
+    {
+        /// <summary>
+        /// Method invoked when associated input action "Move" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnMove(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "CartAim" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnCartAim(InputAction.CallbackContext context);
+    }
+    /// <summary>
+    /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Player3Controls" which allows adding and removing callbacks.
+    /// </summary>
+    /// <seealso cref="Player3ControlsActions.AddCallbacks(IPlayer3ControlsActions)" />
+    /// <seealso cref="Player3ControlsActions.RemoveCallbacks(IPlayer3ControlsActions)" />
+    public interface IPlayer3ControlsActions
+    {
+        /// <summary>
+        /// Method invoked when associated input action "Move" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnMove(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "CartAim" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnCartAim(InputAction.CallbackContext context);
+    }
+    /// <summary>
+    /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Player4Controls" which allows adding and removing callbacks.
+    /// </summary>
+    /// <seealso cref="Player4ControlsActions.AddCallbacks(IPlayer4ControlsActions)" />
+    /// <seealso cref="Player4ControlsActions.RemoveCallbacks(IPlayer4ControlsActions)" />
+    public interface IPlayer4ControlsActions
     {
         /// <summary>
         /// Method invoked when associated input action "Move" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
